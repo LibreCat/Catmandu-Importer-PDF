@@ -51,9 +51,9 @@ sub _createDocFromFilename {
 }
 
 sub generator {
-	my ($self) = @_;
+    my ($self) = @_;
 
-	return sub {
+    return sub {
         state $doc = undef;
 
         unless($doc){
@@ -62,11 +62,31 @@ sub generator {
         }
         return;
 
-	}
+    }
 }
 sub DESTROY {
     my ($self) = @_;
     close($self->fh);
 }
+=head1 NAME
+
+Catmandu::Importer::PDF - Catmandu importer to extract data from one pdf
+
+=head1 SYNOPSIS
+
+    # From the command line
+
+    # Export pdf information, and text
+    $ catmandu convert PDF --file input.pdf to YAML
+
+=head1 AUTHORS
+
+Nicolas Franck C<< <nicolas.franck at ugent.be> >>
+
+=head1 SEE ALSO
+
+L<Catmandu>, L<Catmandu::Importer> , L<Poppler>
+
+=cut
 
 1;
