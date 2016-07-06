@@ -74,10 +74,79 @@ Catmandu::Importer::PDF - Catmandu importer to extract data from one pdf
 
 =head1 SYNOPSIS
 
-    # From the command line
+# From the command line
 
-    # Export pdf information, and text
-    $ catmandu convert PDF --file input.pdf to YAML
+# Export pdf information, and text
+
+$ catmandu convert PDF --file input.pdf to YAML
+
+#In a script
+
+use Catmandu::Sane;
+
+use Catmandu::Importer::PDF;
+
+my $importer = Catmandu::Importer::PDF->new( file => "/tmp/input.pdf" );
+
+$importer->each(sub{
+
+    my $pdf = $_[0];
+    #..
+
+});
+
+=head1 EXAMPLE OUTPUT IN YAML
+
+document:
+  author: ~
+  creation_date: 1207274644
+  creator: PDFplus
+  keywords: ~
+  metadata: ~
+  modification_date: 1421574847
+  producer: "Nobody at all"
+  subject: ~
+  title: "Hello there"
+  version: PDF-1.6
+pages:
+- label: Cover Page
+  height: 878
+  width: 595
+  text: "Hello world"
+
+=head1 INSTALL
+
+In order to install this package you need the following system packages installed
+
+=over
+
+=item Centos
+
+* perl-devel
+
+* make
+
+* gcc
+
+* gcc-c++
+
+* libyaml-devel
+
+* libyaml
+
+* poppler-glib ( >= 0.16 )
+
+* poppler-glib-devel ( >= 0.16 )
+
+Centos 6 only has poppler-glib 0.12. So you need at least Centos 7.
+Or you can compile the package.
+
+=back
+
+=head1 NOTES
+
+* returns only one record, compared to other Catmandu importers
+* all pages are stored in one record. For large documents this can be memory intensive.
 
 =head1 AUTHORS
 
