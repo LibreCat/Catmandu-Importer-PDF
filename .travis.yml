@@ -10,6 +10,7 @@ before_install:
   - sudo apt-get install gobject-introspection
   - sudo apt-get install libpoppler-glib8
   - sudo apt-get install libpoppler-glib-dev
+  - sudo apt-get install libglib-object-introspection-perl
 install:
   - cpanm --quiet --installdeps --notest --force --skip-satisfied .
   - cpanm --quiet --notest --skip-satisfied Devel::Cover
