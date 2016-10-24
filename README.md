@@ -58,6 +58,10 @@ In order to install this package you need the following system packages installe
     Centos 6 only has poppler-glib 0.12. So you need at least Centos 7.
     Or you can compile the package.
 
+    \* gobject-introspection-devel
+
+    \* gobject-introspection
+
 - Ubuntu
 
     \* libpoppler-glib8
@@ -65,6 +69,8 @@ In order to install this package you need the following system packages installe
     \* libpoppler-glib-dev
 
     \* gobject-introspection
+
+    \* libgirepository1.0-dev
 
 # NOTES
 
