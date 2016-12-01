@@ -1,4 +1,4 @@
-package Catmandu::Importer::PDF;
+package Catmandu::Importer::PDFInfo;
 
 use Catmandu::Sane;
 use Poppler;
@@ -13,48 +13,25 @@ sub _createDocFromFilename {
 
     my $pdf = Poppler::Document->new_from_file( $filename );
 
-    my $num_pages = $pdf->get_n_pages();
-
-    my $record = {
-        document => {
-            version => $pdf->get_pdf_version_string(),
-            title => $pdf->get_title(),
-            author => $pdf->get_author(),
-            subject => $pdf->get_subject(),
-            keywords => $pdf->get_keywords(),
-            creator => $pdf->get_creator(),
-            producer => $pdf->get_producer(),
-            creation_date => $pdf->get_creation_date(),
-            modification_date => $pdf->get_modification_date(),
-            metadata => $pdf->get_metadata()
-        },
-        pages => []
+    +{
+        version => $pdf->get_pdf_version_string(),
+        title => $pdf->get_title(),
+        author => $pdf->get_author(),
+        subject => $pdf->get_subject(),
+        keywords => $pdf->get_keywords(),
+        creator => $pdf->get_creator(),
+        producer => $pdf->get_producer(),
+        creation_date => $pdf->get_creation_date(),
+        modification_date => $pdf->get_modification_date(),
+        metadata => $pdf->get_metadata()
     };
-
-    for(my $i = 0;$i < $num_pages;$i++){
-        my $page = $pdf->get_page($i);
-        my $text = $page->get_text();
-        my($w,$h) = $page->get_size;
-        my $label = $page->get_label();
-
-        my $p = {
-            width => $w,
-            height => $h,
-            label => $label,
-            text => $text
-        };
-
-        push @{ $record->{pages} },$p;
-    }
-
-    $record;
 }
 
 sub generator {
     my ($self) = @_;
 
     return sub {
-        state $doc = undef;
+        state $doc;
 
         unless($doc){
             $doc = _createDocFromFilename( $self->file );
@@ -73,7 +50,7 @@ sub DESTROY {
 
 =head1 NAME
 
-Catmandu::Importer::PDF - Catmandu importer to extract data from one pdf
+Catmandu::Importer::PDFInfo - Catmandu importer to extract metadata from one pdf
 
 =begin markdown
 
@@ -89,17 +66,17 @@ Catmandu::Importer::PDF - Catmandu importer to extract data from one pdf
 
 # From the command line
 
-# Export pdf information, and text
+# Export pdf information
 
-$ catmandu convert PDF --file input.pdf to YAML
+$ catmandu convert PDFInfo --file input.pdf to YAML
 
 #In a script
 
 use Catmandu::Sane;
 
-use Catmandu::Importer::PDF;
+use Catmandu::Importer::PDFInfo;
 
-my $importer = Catmandu::Importer::PDF->new( file => "/tmp/input.pdf" );
+my $importer = Catmandu::Importer::PDFInfo->new( file => "/tmp/input.pdf" );
 
 $importer->each(sub{
 
@@ -112,22 +89,16 @@ $importer->each(sub{
 
 =begin text
 
-    document:
-      author: ~
-      creation_date: 1207274644
-      creator: PDFplus
-      keywords: ~
-      metadata: ~
-      modification_date: 1421574847
-      producer: "Nobody at all"
-      subject: ~
-      title: "Hello there"
-      version: PDF-1.6
-    pages:
-    - label: Cover Page
-      height: 878
-      width: 595
-      text: "Hello world"
+  author: ~
+  creation_date: 1207274644
+  creator: PDFplus
+  keywords: ~
+  metadata: ~
+  modification_date: 1421574847
+  producer: "Nobody at all"
+  subject: ~
+  title: "Hello there"
+  version: PDF-1.6
 
 =end text
 
@@ -182,7 +153,7 @@ Nicolas Franck C<< <nicolas.franck at ugent.be> >>
 
 =head1 SEE ALSO
 
-L<Catmandu::Importer::PDFInfo>, L<Catmandu::Importer::PDFPages>, L<Catmandu>, L<Catmandu::Importer> , L<Poppler>
+L<Catmandu>, L<Catmandu::Importer> , L<Poppler>
 
 =cut
 

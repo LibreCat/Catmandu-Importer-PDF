@@ -11,6 +11,7 @@ before_install:
   - sudo apt-get install libpoppler-glib8
   - sudo apt-get install libpoppler-glib-dev
   - sudo apt-get install libgirepository1.0-dev
+  - sudo apt-get install libglib-perl
 install:
   - cpanm --quiet --installdeps --notest --force --skip-satisfied .
   - cpanm --quiet --notest --skip-satisfied Devel::Cover
