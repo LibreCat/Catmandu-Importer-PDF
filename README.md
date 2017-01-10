@@ -58,10 +58,6 @@ In order to install this package you need the following system packages installe
     Centos 6 only has poppler-glib 0.12. So you need at least Centos 7.
     Or you can compile the package.
 
-    \* gobject-introspection-devel
-
-    \* gobject-introspection
-
 - Ubuntu
 
     \* libpoppler-glib8
@@ -84,4 +80,4 @@ Nicolas Franck `<nicolas.franck at ugent.be>`
 
 # SEE ALSO
 
-[Catmandu](https://metacpan.org/pod/Catmandu), [Catmandu::Importer](https://metacpan.org/pod/Catmandu::Importer) , [Poppler](https://metacpan.org/pod/Poppler)
+[Catmandu::Importer::PDFInfo](https://metacpan.org/pod/Catmandu::Importer::PDFInfo), [Catmandu::Importer::PDFPages](https://metacpan.org/pod/Catmandu::Importer::PDFPages), [Catmandu](https://metacpan.org/pod/Catmandu), [Catmandu::Importer](https://metacpan.org/pod/Catmandu::Importer) , [Poppler](https://metacpan.org/pod/Poppler)
