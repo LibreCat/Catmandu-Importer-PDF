@@ -101,29 +101,6 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Test::Exception 0
       Test::More 0
-  CPAN-Meta-2.150005
-    pathname: D/DA/DAGOLDEN/CPAN-Meta-2.150005.tar.gz
-    provides:
-      CPAN::Meta 2.150005
-      CPAN::Meta::Converter 2.150005
-      CPAN::Meta::Feature 2.150005
-      CPAN::Meta::History 2.150005
-      CPAN::Meta::Merge 2.150005
-      CPAN::Meta::Prereqs 2.150005
-      CPAN::Meta::Spec 2.150005
-      CPAN::Meta::Validator 2.150005
-    requirements:
-      CPAN::Meta::Requirements 2.121
-      CPAN::Meta::YAML 0.008
-      Carp 0
-      ExtUtils::MakeMaker 6.17
-      JSON::PP 2.27200
-      Parse::CPAN::Meta 1.4414
-      Scalar::Util 0
-      perl 5.008
-      strict 0
-      version 0.88
-      warnings 0
   Cairo-1.106
     pathname: X/XA/XAOC/Cairo-1.106.tar.gz
     provides:
@@ -992,13 +969,21 @@ DISTRIBUTIONS
   Marpa-R2-3.000000
     pathname: J/JK/JKEGL/Marpa-R2-3.000000.tar.gz
     provides:
-      DynaLoader 3.000000
       Marpa::R2 3.000000
       Marpa::R2::ASF 3.000000
       Marpa::R2::Grammar 3.000000
+      Marpa::R2::HTML 3.000000
+      Marpa::R2::HTML::Callback 3.000000
+      Marpa::R2::HTML::Config 3.000000
+      Marpa::R2::HTML::Config::Compile 3.000000
+      Marpa::R2::MetaAST 3.000000
+      Marpa::R2::MetaG 3.000000
       Marpa::R2::Recognizer 3.000000
-      Marpa::R2::Scanless::G undef
-      Marpa::R2::Scanless::R undef
+      Marpa::R2::Scanless::G 3.000000
+      Marpa::R2::Scanless::R 3.000000
+      Marpa::R2::Stuifzand 3.000000
+      Marpa::R2::Thin::Trace 3.000000
+      Marpa::R2::Value 3.000000
     requirements:
       CPAN::Meta::Converter 2.120921
       Carp 1.08
@@ -1431,17 +1416,6 @@ DISTRIBUTIONS
     requirements:
       Exporter 5.57
       perl 5.006
-  Scalar-List-Utils-1.45
-    pathname: P/PE/PEVANS/Scalar-List-Utils-1.45.tar.gz
-    provides:
-      List::Util 1.45
-      List::Util::XS 1.45
-      Scalar::Util 1.45
-      Sub::Util 1.45
-    requirements:
-      ExtUtils::MakeMaker 0
-      Test::More 0
-      perl 5.006
   String-RewritePrefix-0.007
     pathname: R/RJ/RJBS/String-RewritePrefix-0.007.tar.gz
     provides:
@@ -1628,64 +1602,6 @@ DISTRIBUTIONS
       Test::Builder::Tester 1.02
       Test::More 0.42
       overload 0
-  Test-Simple-1.302037
-    pathname: E/EX/EXODIST/Test-Simple-1.302037.tar.gz
-    provides:
-      Test2 1.302037
-      Test2::API 1.302037
-      Test2::API::Breakage 1.302037
-      Test2::API::Context 1.302037
-      Test2::API::Instance 1.302037
-      Test2::API::Stack 1.302037
-      Test2::Event 1.302037
-      Test2::Event::Bail 1.302037
-      Test2::Event::Diag 1.302037
-      Test2::Event::Exception 1.302037
-      Test2::Event::Generic 1.302037
-      Test2::Event::Note 1.302037
-      Test2::Event::Ok 1.302037
-      Test2::Event::Plan 1.302037
-      Test2::Event::Skip 1.302037
-      Test2::Event::Subtest 1.302037
-      Test2::Event::Waiting 1.302037
-      Test2::Formatter 1.302037
-      Test2::Formatter::TAP 1.302037
-      Test2::Hub 1.302037
-      Test2::Hub::Interceptor 1.302037
-      Test2::Hub::Interceptor::Terminator 1.302037
-      Test2::Hub::Subtest 1.302037
-      Test2::IPC 1.302037
-      Test2::IPC::Driver 1.302037
-      Test2::IPC::Driver::Files 1.302037
-      Test2::Util 1.302037
-      Test2::Util::ExternalMeta 1.302037
-      Test2::Util::HashBase 1.302037
-      Test2::Util::Trace 1.302037
-      Test::Builder 1.302037
-      Test::Builder::Formatter 1.302037
-      Test::Builder::IO::Scalar 2.113
-      Test::Builder::Module 1.302037
-      Test::Builder::Tester 1.302037
-      Test::Builder::Tester::Color 1.302037
-      Test::Builder::Tester::Tie 1.302037
-      Test::Builder::TodoDiag 1.302037
-      Test::More 1.302037
-      Test::Simple 1.302037
-      Test::Tester 1.302037
-      Test::Tester::Capture 1.302037
-      Test::Tester::CaptureRunner 1.302037
-      Test::Tester::Delegate 1.302037
-      Test::use::ok 1.302037
-      ok 1.302037
-    requirements:
-      ExtUtils::MakeMaker 0
-      File::Spec 0
-      File::Temp 0
-      PerlIO 0
-      Scalar::Util 1.13
-      Storable 0
-      perl 5.008001
-      utf8 0
   Test-SubCalls-1.09
     pathname: A/AD/ADAMK/Test-SubCalls-1.09.tar.gz
     provides:
