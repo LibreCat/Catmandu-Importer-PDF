@@ -25,6 +25,8 @@ my $array;
 lives_ok(sub{
 
     $array = $importer->to_array();
+    chomp( $array->[0]->{pages}->[0]->{text} );
+    $array->[0]->{pages}->[0]->{text} =~ s/\f$//o;
 
 },"imported pdf");
 
