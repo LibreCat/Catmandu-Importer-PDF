@@ -110,7 +110,7 @@ Catmandu::Importer::PDF - Catmandu importer to extract data from one pdf
 
 =head1 EXAMPLE OUTPUT IN YAML
 
-=begin
+=begin text
 
     ---
     document:
@@ -130,7 +130,7 @@ Catmandu::Importer::PDF - Catmandu importer to extract data from one pdf
       width: 595
       text: "Hello world"
 
-=end
+=end text
 
 =head1 INSTALL
 

@@ -87,7 +87,7 @@ Catmandu::Importer::PDFInfo - Catmandu importer to extract metadata from one pdf
 
 =head1 EXAMPLE OUTPUT IN YAML
 
-=begin
+=begin text
 
     ---
     author: ~
@@ -101,7 +101,7 @@ Catmandu::Importer::PDFInfo - Catmandu importer to extract metadata from one pdf
     title: "Hello there"
     version: PDF-1.6
 
-=end
+=end text
 
 =head1 INSTALL
 

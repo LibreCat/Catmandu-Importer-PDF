@@ -33,24 +33,6 @@ Catmandu::Importer::PDF - Catmandu importer to extract data from one pdf
 
 # EXAMPLE OUTPUT IN YAML
 
-    ---
-    document:
-      author: ~
-      creation_date: 1207274644
-      creator: PDFplus
-      keywords: ~
-      metadata: ~
-      modification_date: 1421574847
-      producer: "Nobody at all"
-      subject: ~
-      title: "Hello there"
-      version: PDF-1.6
-    pages:
-    - label: Cover Page
-      height: 878
-      width: 595
-      text: "Hello world"
-
 # INSTALL
 
 In order to install this package you need the following system packages installed
@@ -101,15 +83,3 @@ Nicolas Franck `<nicolas.franck at ugent.be>`
 # SEE ALSO
 
 [Catmandu::Importer::PDFInfo](https://metacpan.org/pod/Catmandu::Importer::PDFInfo), [Catmandu::Importer::PDFPages](https://metacpan.org/pod/Catmandu::Importer::PDFPages), [Catmandu](https://metacpan.org/pod/Catmandu), [Catmandu::Importer](https://metacpan.org/pod/Catmandu::Importer) , [Poppler](https://metacpan.org/pod/Poppler)
-
-# POD ERRORS
-
-Hey! **The above document had some coding errors, which are explained below:**
-
-- Around line 44:
-
-    &#x3d;begin without a target?
-
-- Around line 64:
-
-    '=end' without a target?

@@ -91,7 +91,7 @@ Catmandu::Importer::PDFPages - Catmandu importer to extract text data per page f
 
 =head1 EXAMPLE OUTPUT IN YAML
 
-=begin
+=begin text
 
     ---
     - label: Cover Page
@@ -99,7 +99,7 @@ Catmandu::Importer::PDFPages - Catmandu importer to extract text data per page f
       width: 595
       text: "Hello world"
 
-=end
+=end text
 
 =head1 INSTALL
 
