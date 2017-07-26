@@ -64,43 +64,44 @@ Catmandu::Importer::PDFInfo - Catmandu importer to extract metadata from one pdf
 
 =head1 SYNOPSIS
 
-# From the command line
+    # From the command line
 
-# Export pdf information
+    # Export pdf information
 
-$ catmandu convert PDFInfo --file input.pdf to YAML
+    $ catmandu convert PDFInfo --file input.pdf to YAML
 
-#In a script
+    #In a script
 
-use Catmandu::Sane;
+    use Catmandu::Sane;
 
-use Catmandu::Importer::PDFInfo;
+    use Catmandu::Importer::PDFInfo;
 
-my $importer = Catmandu::Importer::PDFInfo->new( file => "/tmp/input.pdf" );
+    my $importer = Catmandu::Importer::PDFInfo->new( file => "/tmp/input.pdf" );
 
-$importer->each(sub{
+    $importer->each(sub{
 
-    my $pdf = $_[0];
-    #..
+        my $pdf = $_[0];
+        #..
 
-});
+    });
 
 =head1 EXAMPLE OUTPUT IN YAML
 
-=begin text
+=begin
 
-  author: ~
-  creation_date: 1207274644
-  creator: PDFplus
-  keywords: ~
-  metadata: ~
-  modification_date: 1421574847
-  producer: "Nobody at all"
-  subject: ~
-  title: "Hello there"
-  version: PDF-1.6
+    ---
+    author: ~
+    creation_date: 1207274644
+    creator: PDFplus
+    keywords: ~
+    metadata: ~
+    modification_date: 1421574847
+    producer: "Nobody at all"
+    subject: ~
+    title: "Hello there"
+    version: PDF-1.6
 
-=end text
+=end
 
 =head1 INSTALL
 
@@ -140,12 +141,6 @@ Or you can compile the package.
 * libgirepository1.0-dev
 
 =back
-
-=head1 NOTES
-
-* returns only one record, compared to other Catmandu importers
-
-* all pages are stored in one record. For large documents this can be memory intensive.
 
 =head1 AUTHORS
 

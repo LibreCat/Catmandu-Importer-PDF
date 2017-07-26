@@ -68,37 +68,38 @@ Catmandu::Importer::PDFPages - Catmandu importer to extract text data per page f
 
 =head1 SYNOPSIS
 
-# From the command line
+    # From the command line
 
-# Export pdf pages with their text and coördinates
+    # Export pdf pages with their text and coördinates
 
-$ catmandu convert PDFPages --file input.pdf to YAML
+    $ catmandu convert PDFPages --file input.pdf to YAML
 
-#In a script
+    #In a script
 
-use Catmandu::Sane;
+    use Catmandu::Sane;
 
-use Catmandu::Importer::PDFPages;
+    use Catmandu::Importer::PDFPages;
 
-my $importer = Catmandu::Importer::PDFPages->new( file => "/tmp/input.pdf" );
+    my $importer = Catmandu::Importer::PDFPages->new( file => "/tmp/input.pdf" );
 
-$importer->each(sub{
+    $importer->each(sub{
 
-    my $page = $_[0];
-    #..
+        my $page = $_[0];
+        #..
 
-});
+    });
 
 =head1 EXAMPLE OUTPUT IN YAML
 
-=begin text
+=begin
 
+    ---
     - label: Cover Page
       height: 878
       width: 595
       text: "Hello world"
 
-=end text
+=end
 
 =head1 INSTALL
 
@@ -138,12 +139,6 @@ Or you can compile the package.
 * libgirepository1.0-dev
 
 =back
-
-=head1 NOTES
-
-* returns only one record, compared to other Catmandu importers
-
-* all pages are stored in one record. For large documents this can be memory intensive.
 
 =head1 AUTHORS
 
