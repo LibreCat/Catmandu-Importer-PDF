@@ -176,6 +176,8 @@ Or you can compile the package.
 
 * all pages are stored in one record. For large documents this can be memory intensive.
 
+* see also the alternative importers: PDFPages and PDFInfo
+
 =head1 AUTHORS
 
 Nicolas Franck C<< <nicolas.franck at ugent.be> >>
