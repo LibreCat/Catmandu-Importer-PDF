@@ -4,7 +4,7 @@
       "Nicolas Franck"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.030, Dist::Milla version v1.0.15, CPAN::Meta::Converter version 2.143240",
+   "generated_by" : "Dist::Milla version v1.0.17, Dist::Zilla version 6.008, CPAN::Meta::Converter version 2.150001",
    "license" : [
       "perl_5"
    ],
@@ -15,23 +15,23 @@
    "name" : "Catmandu-Importer-PDF",
    "no_index" : {
       "directory" : [
-         "t",
-         "xt",
+         "eg",
+         "examples",
          "inc",
          "share",
-         "eg",
-         "examples"
+         "t",
+         "xt"
       ]
    },
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "Module::Build::Tiny" : "0.039"
+            "Module::Build::Tiny" : "0.034"
          }
       },
       "develop" : {
          "requires" : {
-            "Dist::Milla" : "v1.0.15",
+            "Dist::Milla" : "v1.0.17",
             "Test::Pod" : "1.41"
          }
       },
@@ -65,7 +65,9 @@
    },
    "version" : "0.01",
    "x_contributors" : [
-      "Nicolas Franck <nicolas.franck@ugent.be>"
-   ]
+      "Nicolas Franck <nicolas.franck@ugent.be>",
+      "Nicolas Franck <njfranck@ca20c533.ugent.be>"
+   ],
+   "x_serialization_backend" : "Cpanel::JSON::XS version 3.0225"
 }
 

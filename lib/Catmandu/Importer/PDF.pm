@@ -87,31 +87,32 @@ Catmandu::Importer::PDF - Catmandu importer to extract data from one pdf
 
 =head1 SYNOPSIS
 
-# From the command line
+    #From the command line
 
-# Export pdf information, and text
+    #Export pdf information, and text
 
-$ catmandu convert PDF --file input.pdf to YAML
+    $ catmandu convert PDF --file input.pdf to YAML
 
-#In a script
+    #In a script
 
-use Catmandu::Sane;
+    use Catmandu::Sane;
 
-use Catmandu::Importer::PDF;
+    use Catmandu::Importer::PDF;
 
-my $importer = Catmandu::Importer::PDF->new( file => "/tmp/input.pdf" );
+    my $importer = Catmandu::Importer::PDF->new( file => "/tmp/input.pdf" );
 
-$importer->each(sub{
+    $importer->each(sub{
 
-    my $pdf = $_[0];
-    #..
+        my $pdf = $_[0];
+        #..
 
-});
+    });
 
 =head1 EXAMPLE OUTPUT IN YAML
 
-=begin text
+=begin
 
+    ---
     document:
       author: ~
       creation_date: 1207274644
@@ -129,7 +130,7 @@ $importer->each(sub{
       width: 595
       text: "Hello world"
 
-=end text
+=end
 
 =head1 INSTALL
 
