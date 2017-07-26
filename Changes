@@ -1,0 +1,6 @@
+{{$NEXT}}
+  - add Catmandu::Importer::PDF
+  - add Catmandu::Importer::PDFPages
+  - add Catmandu::Importer::PDFInfo
+  - add tests
+  - add travis integration
