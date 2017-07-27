@@ -1,4 +1,6 @@
 {{$NEXT}}
+  - depend on lower version of Glib::Object::Introspection for centos 7
+  - add tests
 
 0.01  2017-07-26 11:35:44 CEST
   - add Catmandu::Importer::PDF
