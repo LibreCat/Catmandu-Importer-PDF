@@ -140,6 +140,8 @@ In order to install this package you need the following system packages installe
 
 =item Centos
 
+Requires Centos 7 at minimum. Centos 6 only has poppler-glib 0.12.
+
 * perl-devel
 
 * make
@@ -156,8 +158,7 @@ In order to install this package you need the following system packages installe
 
 * poppler-glib-devel ( >= 0.16 )
 
-Centos 6 only has poppler-glib 0.12. So you need at least Centos 7.
-Or you can compile the package.
+* gobject-introspection-devel
 
 =item Ubuntu
 
