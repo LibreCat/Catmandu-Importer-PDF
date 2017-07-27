@@ -127,7 +127,7 @@ Catmandu::Importer::PDF - Catmandu importer to extract data from one pdf
       width: 595
       text: "Hello world"
 
-=head1 INSTALL
+=head1 INSTALLATION
 
 In order to install this package you need the following system packages installed
 
@@ -171,17 +171,17 @@ Requires Ubuntu 14 at minimum.
 
 =head1 NOTES
 
-* Catmandu::Importer::PDF returns one record, containing both document information, and page text
+* L<Catmandu::Importer::PDF> returns one record, containing both document information, and page text
 
-* Catmandu::Importer::PDFPages returns multiple record, each for each page
+* L<Catmandu::Importer::PDFPages> returns multiple records, each for each page
 
-* Catmandu::Importer::PDFInfo returns one record, containing document information
+* L<Catmandu::Importer::PDFInfo> returns one record, containing document information
 
 =head1 KNOWN ISSUES
 
 * Due to a bug in older versions of Poppler (bug #94173), the creation_date and modification_date can be returned in local time, instead of utc.
 
-* Some versions of poppler add form feeds and newlines to a text line, while others don't.
+* Some versions of Poppler add form feeds and newlines to a text line, while others don't.
 
 =head1 AUTHORS
 
