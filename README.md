@@ -33,11 +33,30 @@ Catmandu::Importer::PDF - Catmandu importer to extract data from one pdf
 
 # EXAMPLE OUTPUT IN YAML
 
+    document:
+      author: ~
+      creation_date: 1207274644
+      creator: PDFplus
+      keywords: ~
+      metadata: ~
+      modification_date: 1421574847
+      producer: "Nobody at all"
+      subject: ~
+      title: "Hello there"
+      version: PDF-1.6
+    pages:
+    - label: Cover Page
+      height: 878
+      width: 595
+      text: "Hello world"
+
 # INSTALL
 
 In order to install this package you need the following system packages installed
 
 - Centos
+
+    Requires Centos 7 at minimum. Centos 6 only has poppler-glib 0.12.
 
     \* perl-devel
 
@@ -55,8 +74,7 @@ In order to install this package you need the following system packages installe
 
     \* poppler-glib-devel ( >= 0.16 )
 
-    Centos 6 only has poppler-glib 0.12. So you need at least Centos 7.
-    Or you can compile the package.
+    \* gobject-introspection-devel
 
 - Ubuntu
 

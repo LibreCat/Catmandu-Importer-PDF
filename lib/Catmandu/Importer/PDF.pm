@@ -110,9 +110,6 @@ Catmandu::Importer::PDF - Catmandu importer to extract data from one pdf
 
 =head1 EXAMPLE OUTPUT IN YAML
 
-=begin text
-
-    ---
     document:
       author: ~
       creation_date: 1207274644
@@ -129,8 +126,6 @@ Catmandu::Importer::PDF - Catmandu importer to extract data from one pdf
       height: 878
       width: 595
       text: "Hello world"
-
-=end text
 
 =head1 INSTALL
 
@@ -162,6 +157,8 @@ Requires Centos 7 at minimum. Centos 6 only has poppler-glib 0.12.
 
 =item Ubuntu
 
+Requires Ubuntu 14 at minimum.
+
 * libpoppler-glib8
 
 * libpoppler-glib-dev
@@ -174,11 +171,17 @@ Requires Centos 7 at minimum. Centos 6 only has poppler-glib 0.12.
 
 =head1 NOTES
 
-* returns only one record, compared to other Catmandu importers
+* Catmandu::Importer::PDF returns one record, containing both document information, and page text
 
-* all pages are stored in one record. For large documents this can be memory intensive.
+* Catmandu::Importer::PDFPages returns multiple record, each for each page
 
-* see also the alternative importers: PDFPages and PDFInfo
+* Catmandu::Importer::PDFInfo returns one record, containing document information
+
+=head1 KNOWN ISSUES
+
+* Due to a bug in older versions of Poppler (bug #94173), the creation_date and modification_date can be returned in local time, instead of utc.
+
+* Some versions of poppler add form feeds and newlines to a text line, while others don't.
 
 =head1 AUTHORS
 
