@@ -1,4 +1,6 @@
 {{$NEXT}}
+
+0.011  2017-07-27 11:32:25 CEST
   - depend on lower version of Glib::Object::Introspection for centos 7
   - add tests
   - change pod

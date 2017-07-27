@@ -4,7 +4,7 @@ use Catmandu::Sane;
 use Poppler;
 use Moo;
 
-our $VERSION = '0.01';
+our $VERSION = '0.011';
 
 with 'Catmandu::Importer';
 

@@ -64,7 +64,7 @@
          "web" : "https://github.com/LibreCat/Catmandu-Importer-PDF"
       }
    },
-   "version" : "0.01",
+   "version" : "0.011",
    "x_contributors" : [
       "Nicolas Franck <nicolas.franck@ugent.be>",
       "Nicolas Franck <njfranck@ca20c533.ugent.be>"
