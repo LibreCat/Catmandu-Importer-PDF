@@ -38,15 +38,17 @@
       "runtime" : {
          "requires" : {
             "Catmandu" : "1.0",
-            "Glib::Object::Introspection" : "== 0.040",
+            "DateTime" : "0",
             "Moo" : "0",
             "Poppler" : "1.0101",
             "namespace::clean" : "0.24",
-            "perl" : "v5.10.1"
+            "perl" : "v5.10.1",
+            "version" : "0"
          }
       },
       "test" : {
          "requires" : {
+            "File::Spec" : "0",
             "Test::Exception" : "0",
             "Test::More" : "0"
          }
