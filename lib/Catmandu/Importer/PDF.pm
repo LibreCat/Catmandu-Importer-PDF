@@ -221,7 +221,7 @@ Requires Ubuntu 14 at minimum.
 
 =head1 KNOWN ISSUES
 
-* Due to a bug in older versions of Poppler (bug #94173), the creation_date and modification_date can be returned in local time, instead of utc.
+* Due to a bug in older versions of poppler-glib (bug #94173), the creation_date and modification_date can be returned in local time, instead of utc. This module tries to fix that.
 
 * Some versions of Poppler add form feeds and newlines to a text line, while others don't.
 
