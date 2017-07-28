@@ -3,6 +3,7 @@ use warnings;
 use utf8;
 use Test::More;
 use Test::Exception;
+use File::Spec;
 
 my $pkg;
 BEGIN {
@@ -16,7 +17,7 @@ my $importer;
 
 lives_ok(sub {
 
-    $importer = $pkg->new( file => 't/pdf/greek.pdf' );
+    $importer = $pkg->new( file => File::Spec->catfile("t","pdf","greek.pdf") );
 
 },"importer created");
 
